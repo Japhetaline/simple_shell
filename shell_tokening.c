@@ -1,4 +1,4 @@
-#include "header_shell.c"
+#include "header_shell.h"
 
 /**
  * tokening - A function that split and create a full string instruct
