@@ -4,7 +4,7 @@
  * main - This is a function that runs our shell
  * @argc: The number of inputed arguments.
  * @argv: pointers to array of inputed arguments
- * @env: pointer ti array of environmental variables
+ * @env: pointer to array of environmental variables
  * Return: 0
  */
 
@@ -54,7 +54,7 @@ int main(int argc, char **argv, char **env)
 void shell_swift(void)
 {
 	if (isatty(STDIN_FILENO))
-		write(STDOUT_FILENO, "hsh>> ", 6);
+		write(STDOUT_FILENO, "hsh$ ", 5);
 }
 
 /**
@@ -66,7 +66,7 @@ void shell_swift(void)
 void operate(int indicators)
 {
 	(void)indicators;
-	write(STDOUT_FILENO, "/nhsh>> ", 7);
+	write(STDOUT_FILENO, "/nhsh$ ", 6);
 }
 
 /**

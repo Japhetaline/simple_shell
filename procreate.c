@@ -27,7 +27,7 @@ void procreate(char **instruct, char *name, char **env, int spiral)
 	}
 	else
 	{
-		wait_error = waitpid(parent_id, &stature, 0);
+		delay_error = waitpid(parent_id, &stature, 0);
 	       if (delay_error < 0)
 	       {
 		       free_exit(instruct);
@@ -52,7 +52,7 @@ int change_dr(const char *trail)
 
 	if (chdir(trail) == -1)
 	{
-		perror(error);
+		perror(trail);
 		return (98);
 	}
 	return (1);

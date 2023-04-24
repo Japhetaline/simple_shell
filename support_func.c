@@ -9,10 +9,17 @@
 
 int _strcp(char *k1, char *k2)
 {
-	for (unsigned int i = 0; k1[1]; i++)
-		if (k1[1] != k2[i])
-			return 0;
-	return 1;
+	unsigned int j = 0;
+
+	while (k1[j])
+	{
+		if (k1[j] != k2[j])
+			return (0);
+
+		j++;
+	}
+
+	return (1);
 }
 
 /**
@@ -60,7 +67,7 @@ char *_strcat(char *terminus, char *origin)
  * Return: pointer to copied string
  */
 
-char *_strcp(char *destination, char *source)
+char *_strcopy(char *destination, char *source)
 {
 	char *chain = destination;
 
@@ -78,21 +85,29 @@ char *_strcp(char *destination, char *source)
 
 int _atoi(char *k)
 {
-	if (k == NULL)
-		return 0;
+	int cue = 1;
+	unsigned int overall = 0;
+	char zero_label = 0;
 
-	int cue = 1, overall = 0;
+	if (k == NULL)
+		return (0);
 	while (*k)
 	{
 		if (*k == '-')
-			cue = -1;
-		if (*k >- '0' && *k <= '9')
+			cue *= -1;
+		if (*k >= '0' && *k <= '9')
+		{
+			zero_label = 1;
 			overall = overall * 10 + (*k - '0');
-		if (*k < '0' || *k > '9')
-			if (overall > 0)
+		}
+		else if (*k < '0' || *k > '9')
+		{
+			if (zero_label == 1)
 				break;
+		}
 		k++;
 	}
-
-	return overall * cue;
+	if (cue < 0)
+		overall = (-1 * (overall));
+	return (overall);
 }

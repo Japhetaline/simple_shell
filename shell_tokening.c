@@ -11,7 +11,7 @@ char **tokening(char *barrier, const char *t)
 {
 	char *coupon = NULL, **instruct = NULL;
 	size_t barsize = 0;
-	int i = 0;
+	int k = 0;
 
 	if (barrier == NULL)
 		return (NULL);
@@ -29,18 +29,18 @@ char **tokening(char *barrier, const char *t)
 	coupon = strtok(barrier, t);
 	while (coupon != NULL)
 	{
-		instruct[i] = malloc(_strlen(coupon) + 1);
-		if (instruct[i] == NULL)
+		instruct[k] = malloc(_strlen(coupon) + 1);
+		if (instruct[k] == NULL)
 		{
 			perror("Unable to allocate barrier");
 			free_mem(instruct);
 			return (NULL);
 		}
 
-		_strcp(instruct[i], coupon);
+		_strcopy(instruct[k], coupon);
 		coupon = strtok(NULL, t);
-		i++;
+		k++;
 	}
-	instruct[i] = NULL;
+	instruct[k] = NULL;
 	return (instruct);
 }

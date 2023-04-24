@@ -8,16 +8,19 @@
 
 void free_mem(char **instruct)
 {
+	size_t k = 0;
+
 	if (instruct == NULL)
-	{
 		return;
-	}
 
-	for (size_t i = 0; instruct[i] != NULL; i++)
+	while (instruct[k])
 	{
-		free(instruct[i]);
+		free(instruct[k]);
+		k++;
 	}
 
+	if (instruct[k] == NULL)
+		free(instruct[k]);
 	free(instruct);
 }
 
@@ -29,19 +32,19 @@ void free_mem(char **instruct)
 
 void free_exit(char **instruct)
 {
-	if (command == NULL)
-	{
+	size_t k = 0;
+
+	if (instruct == NULL)
 		return;
-	}
 
-	size_t i = 0;
-	while (instruct[i] != NULL)
+	while (instruct[k])
 	{
-		free(instruct[i]);
-		i++;
+		free(instruct[k]);
+		k++;
 	}
-	free(instruct[i]);
-	free(instruct);
 
-	exit(EXIT_FAILURE)
+	if (instruct[k] == NULL)
+		free(instruct[k]);
+	free(instruct);
+	exit(EXIT_FAILURE);
 }

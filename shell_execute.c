@@ -12,12 +12,12 @@
 void enforce(char **instruct, char *name, char **env, int spiral)
 {
 	char **routes = NULL, *full_route = NULL;
-	struct coder japh;
+	struct stat er;
 	unsigned int k = 0;
 
 	if (_strcp(instruct[0], "env") != 0)
 		proof_env(env);
-	if (coder(command[0], &japh) == 0)
+	if (stat(instruct[0], &er) == 0)
 	{
 		if (execve(instruct[0], instruct, env) < 0)
 		{
@@ -32,7 +32,7 @@ void enforce(char **instruct, char *name, char **env, int spiral)
 		{
 			full_route = _strcat(routes[k], instruct[0]);
 			k++;
-			if (coder(full_route, &japh) == 0)
+			if (stat(full_route, &er) == 0)
 			{
 				if (execve(full_route, instruct, env) < 0)
 				{
@@ -60,7 +60,7 @@ void proof_env(char **env)
 
 	while (env[k])
 	{
-		length = _strlen(env[i]);
+		length = _strlen(env[k]);
 		write(STDOUT_FILENO, env[k], length);
 		write(STDOUT_FILENO, "\n", 1);
 		k++;

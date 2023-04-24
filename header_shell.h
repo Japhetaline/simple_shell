@@ -10,7 +10,7 @@
 
 /** shell_start */
 
-int main(int argc, char **argv, char **envp);
+int main(int argc, char **argv, char **env);
 void shell_swift(void);
 void operate(int indicators);
 void _EOF(char *barrier);
@@ -28,7 +28,7 @@ char **tokening(char *barrier, const char *t);
 int _strcp(char *k1, char *k2);
 unsigned int _strlen(char *k);
 char *_strcat(char *terminus, char *origin);
-char strcp(char *destination, char *source);
+char *_strcopy(char *destination, char *source);
 int _atoi(char *k);
 
 /* shell_execute */
