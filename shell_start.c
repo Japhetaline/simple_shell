@@ -4,11 +4,11 @@
  * main - This is a function that runs our shell
  * @argc: The number of inputed arguments.
  * @argv: pointers to array of inputed arguments
- * @envp: pointer ti array of environmental variables
+ * @env: pointer ti array of environmental variables
  * Return: 0
  */
 
-/* int main(int argc, char **argv, char ** envp)
+int main(int argc, char **argv, char **env)
 {
 	char *barrier = NULL, **instruct = NULL;
 	size_t barrier_size = 0;
@@ -20,7 +20,7 @@
 	{
 		spiral++;
 		shell_swift();
-		indicator(SIGINT, operate);
+		signal(SIGINT, operate);
 		chars_read = getline(&barrier, &barrier_size, stdin);
 		if (chars_read == EOF)
 			_EOF(barrier);
@@ -36,7 +36,7 @@
 			else if (_strcp(instruct[0], "cd") != 0)
 				change_dr(instruct[1]);
 			else 
-				pid(instruct, argv[0], envp, spiral);
+				procreate(instruct, argv[0], env, spiral);
 		}
 		fflush(stdin);
 		barrier = NULL, barrier_size = 0;
@@ -44,7 +44,7 @@
 	if (chars_read == -1)
 		return (EXIT_FAILURE);
 	return (EXIT_SUCCESS); 
-}*/
+}
 
 /**
  * shell_swift - This is a function that prints the shell swift

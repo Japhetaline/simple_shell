@@ -8,9 +8,7 @@
 #include <unistd.h>
 #include <string.h>
 
-/**
- * shell_start
- */
+/** shell_start */
 
 int main(int argc, char **argv, char **envp);
 void shell_swift(void);
@@ -18,15 +16,28 @@ void operate(int indicators);
 void _EOF(char *barrier);
 void exit_shell(char **instruct);
 
-/*
- * free_store
- */
+/* free_store */
 
 void free_mem(char **instruct);
 void free_exit(char **instruct);
 
-/*
- * tokening
- */
+/*tokening*/
 char **tokening(char *barrier, const char *t);
+
+/* support_func */
+int _strcp(char *k1, char *k2);
+unsigned int _strlen(char *k);
+char *_strcat(char *terminus, char *origin);
+char strcp(char *destination, char *source);
+int _atoi(char *k);
+
+/* shell_execute */
+void enforce(char **instruct, char *name, char **env, int spiral);
+void proof_env(char **env);
+char **_getROUTE(char **env);
+void msg_error(char *name, int spinal, char **instruct);
+
+/* procreate */
+void procreate(char **instruct, char *name, char **env, int spiral);
+int change_dr(const char *trail);
 #endif /*_HEADER_SHELL_*/
