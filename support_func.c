@@ -32,12 +32,13 @@ int _strcp(char *k1, char *k2)
 unsigned int _strlen(char *k)
 {
 	unsigned int len = 0;
+
 	while (*k != '\0')
 	{
 		len++;
 		k++;
 	}
-	return len;
+	return (len);
 }
 
 /**

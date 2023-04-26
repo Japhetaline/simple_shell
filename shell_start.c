@@ -35,7 +35,7 @@ int main(int argc, char **argv, char **env)
 				exit_shell(instruct);
 			else if (_strcp(instruct[0], "cd") != 0)
 				change_dr(instruct[1]);
-			else 
+			else
 				procreate(instruct, argv[0], env, spiral);
 		}
 		fflush(stdin);
@@ -43,7 +43,7 @@ int main(int argc, char **argv, char **env)
 	}
 	if (chars_read == -1)
 		return (EXIT_FAILURE);
-	return (EXIT_SUCCESS); 
+	return (EXIT_SUCCESS);
 }
 
 /**

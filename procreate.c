@@ -28,11 +28,11 @@ void procreate(char **instruct, char *name, char **env, int spiral)
 	else
 	{
 		delay_error = waitpid(parent_id, &stature, 0);
-	       if (delay_error < 0)
-	       {
-		       free_exit(instruct);
-	       }
-	       free_mem(instruct);
+		if (delay_error < 0)
+		{
+			free_exit(instruct);
+		}
+		free_mem(instruct);
 	}
 }
 
