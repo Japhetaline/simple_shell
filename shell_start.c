@@ -1,10 +1,10 @@
 #include "header_shell.h"
 
 /**
- * main - This is a function that runs our shell
+ * main - This is a func that runs the shell
  * @argc: The number of inputed arguments.
  * @argv: pointers to array of inputed arguments
- * @env: pointer to array of environmental variables
+ * @env: pointer to array of environ variables
  * Return: 0
  */
 
@@ -47,8 +47,8 @@ int main(int argc, char **argv, char **env)
 }
 
 /**
- * shell_swift - This is a function that prints the shell swift
- * Return: Nothing
+ * shell_swift - This is a func that prints the shell swift
+ * Return: nothing
  */
 
 void shell_swift(void)
@@ -58,7 +58,7 @@ void shell_swift(void)
 }
 
 /**
- * operate - A function that operate Ctrl+C signal
+ * operate - A func that operate Ctrl+C signal
  * @indicators: The indicator to operate
  * Return: Nothing
  */
@@ -70,7 +70,7 @@ void operate(int indicators)
 }
 
 /**
- * _EOF - A function that checks if buffer is EOF
+ * _EOF - A func that checks if buffer is EOF
  * @barrier: The pointer to the input string
  * Return: Nothing
  */
@@ -90,7 +90,7 @@ void _EOF(char *barrier)
 }
 
 /**
- * exit_shell - A function that exits the shell.
+ * exit_shell - A func that exits the shell.
  * @instruct: The pointer to tokenized instruct.
  * Return: Nothing
  */
