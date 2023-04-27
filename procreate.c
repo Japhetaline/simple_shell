@@ -1,11 +1,11 @@
 #include "header_shell.h"
 
 /**
- * procreate - function that create a sub proocess
- * @instruct: pinter to tokenized instruct
- * @name: pointer to the name of shell
- * @env: pointer to the environmental variable
- * @spiral: number of executed spiral
+ * procreate - func that create a sub process
+ * @instruct: pointer to tokenized instruct
+ * @name: pointer to the shell name
+ * @env: pointer to the environ variable
+ * @spiral: numb of executed spiral
  */
 
 void procreate(char **instruct, char *name, char **env, int spiral)
@@ -37,9 +37,9 @@ void procreate(char **instruct, char *name, char **env, int spiral)
 }
 
 /**
- * change_dr - Function that changes working directory.
- * @trail: The new working directory
- * Return: success(0), fail (-1)
+ * change_dr - func that changes working directory.
+ * @trail: new working directory
+ * Return: 0 for success and -1 for fail
  */
 
 int change_dr(const char *trail)
