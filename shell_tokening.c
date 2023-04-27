@@ -1,10 +1,11 @@
 #include "header_shell.h"
 
+
 /**
- * tokening - A function that split and create a full string instruct
- * @t: The delimeter for strtok.
- * @barrier: The pointer to input string.
- * Return: A string with full instruct
+ * tokening - A func that splits and create a full string instruct
+ * @t: The delimeter for string token
+ * @barrier: The pointer to input str.
+ * Return: A str with full instruct
  */
 
 char **tokening(char *barrier, const char *t)
