@@ -62,7 +62,7 @@ char *_strcat(char *terminus, char *origin)
 }
 
 /**
- * _strcp - A function that copies a string to another string
+ * _strcopy - A function that copies a string to another string
  * @destination: pointer to the copied string
  * @source: pointer to string to copy for
  * Return: pointer to copied string
