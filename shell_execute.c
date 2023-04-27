@@ -1,11 +1,11 @@
 #include "header_shell.h"
 
 /**
- * enforce - function that enforce a instruct
- * @instruct: pointer to tokenized instruct
+ * enforce - func that enforces a instruct
+ * @instruct: pointer to a tokenized instruct
  * @name: name of the shell
- * @env: pointer tonthe environmental variables
- * @spiral: number of enforces spiral
+ * @env: pointer to the environ variables
+ * @spiral: number of enforced spiral
  * Return: Nothing
  */
 
@@ -49,8 +49,8 @@ void enforce(char **instruct, char *name, char **env, int spiral)
 }
 
 /**
- * proof_env - function that prints all environmental variables
- * @env: pointer to environmental variable
+ * proof_env - func that prints all environ variables
+ * @env: pointer to environ variable
  * Return: Nothing
  */
 
@@ -68,9 +68,9 @@ void proof_env(char **env)
 }
 
 /**
- * _getROUTE - function to gets the full value from environmental
+ * _getROUTE - funct to get the full value from environ
  * variable PATH
- * @env: pointer to environmental variable
+ * @env: pointer to environ variable
  * Return: Tokeninzed routes for instruct
  */
 
@@ -95,10 +95,10 @@ char **_getROUTE(char **env)
 }
 
 /**
- * msg_error - function that prints message not found
+ * msg_error - funct that prints message not found
  * @name: the name of shell
- * @spiral: number of spiral
- * @instruct: pointer to tokenized instruct
+ * @spiral: number of spirals
+ * @instruct: pointer to the tokenized instruct
  * Return: Nothing
  */
 
