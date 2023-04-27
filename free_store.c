@@ -1,8 +1,8 @@
 #include "header_shell.h"
 
 /**
- * free_mem - A function that frees all the memory allocated for instruct
- * @instruct: The pointer to allocated memory to free
+ * free_mem - A func that frees all the mem allocated for instruct
+ * @instruct: The pointer to the allocated memory to be freed
  * Return: Nothing
  */
 
@@ -25,8 +25,8 @@ void free_mem(char **instruct)
 }
 
 /**
- * free_exit - A function that frees all the memory allocated and exit
- * @instruct: The pointer to allocated instruct memory to free
+ * free_exit - A func that frees all the mem allocated and exit
+ * @instruct: The point to allocated instruct memo to free
  * Return: Nothing
  */
 
@@ -46,5 +46,6 @@ void free_exit(char **instruct)
 	if (instruct[k] == NULL)
 		free(instruct[k]);
 	free(instruct);
+
 	exit(EXIT_FAILURE);
 }

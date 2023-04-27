@@ -66,7 +66,7 @@ void shell_swift(void)
 void operate(int indicators)
 {
 	(void)indicators;
-	write(STDOUT_FILENO, "/nhsh$ ", 6);
+	write(STDOUT_FILENO, "\nhsh$ ", 6);
 }
 
 /**
@@ -84,7 +84,7 @@ void _EOF(char *barrier)
 	}
 
 	if (isatty(STDIN_FILENO))
-		write(STDOUT_FILENO, "/n", 1);
+		write(STDOUT_FILENO, "\n", 1);
 	free(barrier);
 	exit(EXIT_SUCCESS);
 }
