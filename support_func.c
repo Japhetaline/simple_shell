@@ -1,10 +1,12 @@
 #include "header_shell.h"
 
+
+
 /**
- * _strcp - Fuction which compares two strings
- * @k1: string one
- * @k2: string two
- * Return: same string = 1, not same = 0
+ * _strcp - Func which compares two strs
+ * @k1: str one
+ * @k2: str two
+ * Return: for same str = 1, not same = 0
  */
 
 int _strcp(char *k1, char *k2)
@@ -23,9 +25,9 @@ int _strcp(char *k1, char *k2)
 }
 
 /**
- * _strlen - A function that finds the length of the string
- * @k: The input string
- * Return: The length of the string
+ * _strlen - A func that finds the len of the str
+ * @k: The input str
+ * Return: The len of the str
  */
 
 
@@ -43,9 +45,9 @@ unsigned int _strlen(char *k)
 
 /**
  * _strcat - A function that concatenates two strings
- * @terminus: an input string
- * @origin: an input string
- * Return: A pointer to the resulting string
+ * @terminus: an input str
+ * @origin: an input str
+ * Return: A pointer to the resulting str
  */
 
 char *_strcat(char *terminus, char *origin)
